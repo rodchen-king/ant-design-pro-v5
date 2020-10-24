@@ -1,4 +1,5 @@
 import { PlusOutlined } from '@ant-design/icons';
+import { useModel } from 'umi';
 import { Button, Divider, message, Input, Drawer } from 'antd';
 import React, { useState, useRef } from 'react';
 import { PageContainer, FooterToolbar } from '@ant-design/pro-layout';
@@ -155,6 +156,8 @@ const TableList: React.FC<{}> = () => {
       ),
     },
   ];
+
+  const useAuthModel = useModel('useAuthModel');
 
   return (
     <PageContainer>
