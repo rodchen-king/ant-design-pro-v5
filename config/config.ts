@@ -51,6 +51,7 @@ export default defineConfig({
     {
       path: '/admin',
       name: 'admin',
+      code: 'admin',
       icon: 'crown',
       access: 'canAdmin',
       component: './Admin',
@@ -58,6 +59,8 @@ export default defineConfig({
         {
           path: '/admin/sub-page',
           name: 'sub-page',
+          code: 'sub-page',
+          access: 'canAdmin',
           icon: 'smile',
           component: './Welcome',
         },
@@ -67,6 +70,7 @@ export default defineConfig({
       name: 'list.table-list',
       icon: 'table',
       path: '/list',
+      code: 'list',
       component: './ListTableList',
     },
     {

@@ -5,14 +5,16 @@ import { history, RequestConfig } from 'umi';
 import RightContent from '@/components/RightContent';
 import Footer from '@/components/Footer';
 import { ResponseError } from 'umi-request';
-import { queryCurrent } from './services/user';
+import { queryCurrent, queryUserMenuAuth } from './services/user';
 import defaultSettings from '../config/defaultSettings';
 
 export async function getInitialState(): Promise<{
   settings?: LayoutSettings;
   currentUser?: API.CurrentUser;
   fetchUserInfo: () => Promise<API.CurrentUser | undefined>;
+  userMenuAuth?: API.AuthMenuData[];
 }> {
+  // 获取用户信息
   const fetchUserInfo = async () => {
     try {
       const currentUser = await queryCurrent();
@@ -22,17 +24,31 @@ export async function getInitialState(): Promise<{
     }
     return undefined;
   };
+
+  // 获取权限信息
+  const fetchUserMenuAuth = async () => {
+    try {
+      const muenAuth = await queryUserMenuAuth();
+      return muenAuth;
+    } catch (error) {
+      history.push('/user/login');
+    }
+    return [];
+  };
+
   // 如果是登录页面，不执行
   if (history.location.pathname !== '/user/login') {
     const currentUser = await fetchUserInfo();
     return {
       fetchUserInfo,
+      userMenuAuth: await fetchUserMenuAuth(),
       currentUser,
       settings: defaultSettings,
     };
   }
   return {
     fetchUserInfo,
+    userMenuAuth: await fetchUserMenuAuth(),
     settings: defaultSettings,
   };
 }

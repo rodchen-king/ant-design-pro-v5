@@ -11,3 +11,7 @@ export async function queryCurrent() {
 export async function queryNotices(): Promise<any> {
   return request<{ data: API.NoticeIconData[] }>('/api/notices');
 }
+
+export async function queryUserMenuAuth() {
+  return request<API.AuthMenuData[]>('/api/user/fetchUserMenuAuth');
+}

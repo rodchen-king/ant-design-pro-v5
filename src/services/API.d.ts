@@ -32,4 +32,19 @@ declare namespace API {
     extra: any;
     status: string;
   }
+
+  export interface AuthMenuData {
+    code: string;
+    path: string;
+  }
+
+  export interface Route {
+    path?: string;
+    name?: string;
+    icon?: string;
+    code?: string,
+    access?: string,
+    component?: string,
+    routes?: Route[]
+  }
 }
