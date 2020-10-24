@@ -11,6 +11,7 @@ export default defineConfig({
   dva: {
     hmr: true,
   },
+  sula: {},
   layout: {
     name: 'Ant Design Pro',
     locale: true,
