@@ -12,7 +12,13 @@ export default defineConfig({
   dva: {
     hmr: true,
   },
-  sula: {},
+  sula: {
+    locale: {
+      default: 'zh-CN',
+      // default true, when it is true, will use `navigator.language` overwrite default
+      baseNavigator: true,
+    },
+  },
   layout: {
     name: 'Ant Design Pro',
     locale: true,

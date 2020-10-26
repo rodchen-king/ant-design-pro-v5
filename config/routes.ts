@@ -35,6 +35,21 @@ export default [
     ],
   },
   {
+    path: '/query-table',
+    name: 'queryTable',
+    code: 'queryTable',
+    icon: 'crown',
+    routes: [
+      {
+        path: '/query-table/normal-table',
+        name: 'normalTable',
+        code: 'normal-table',
+        icon: 'smile',
+        component: './QueryTable/NormalTable',
+      },
+    ],
+  },
+  {
     name: 'list.table-list',
     icon: 'table',
     path: '/list',
