@@ -2,6 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
+import routes from './routes';
 
 const { REACT_APP_ENV } = process.env;
 
@@ -10,6 +11,13 @@ export default defineConfig({
   antd: {},
   dva: {
     hmr: true,
+  },
+  sula: {
+    locale: {
+      default: 'zh-CN',
+      // default true, when it is true, will use `navigator.language` overwrite default
+      baseNavigator: true,
+    },
   },
   layout: {
     name: 'Ant Design Pro',
@@ -30,57 +38,7 @@ export default defineConfig({
     ie: 11,
   },
   // umi routes: https://umijs.org/docs/routing
-  routes: [
-    {
-      path: '/user',
-      layout: false,
-      routes: [
-        {
-          name: 'login',
-          path: '/user/login',
-          component: './user/login',
-        },
-      ],
-    },
-    {
-      path: '/welcome',
-      name: 'welcome',
-      icon: 'smile',
-      component: './Welcome',
-    },
-    {
-      path: '/admin',
-      name: 'admin',
-      code: 'admin',
-      icon: 'crown',
-      access: 'canAdmin',
-      component: './Admin',
-      routes: [
-        {
-          path: '/admin/sub-page',
-          name: 'sub-page',
-          code: 'sub-page',
-          access: 'canAdmin',
-          icon: 'smile',
-          component: './Welcome',
-        },
-      ],
-    },
-    {
-      name: 'list.table-list',
-      icon: 'table',
-      path: '/list',
-      code: 'list',
-      component: './ListTableList',
-    },
-    {
-      path: '/',
-      redirect: '/welcome',
-    },
-    {
-      component: './404',
-    },
-  ],
+  routes: routes,
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
     // ...darkTheme,
