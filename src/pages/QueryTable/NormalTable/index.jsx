@@ -194,6 +194,10 @@ const Normatble = (props) => {
   const config = {
     layout: 'vertical',
     remoteDataSource,
+    rowSelection: {
+      onChange: () => {
+      },
+    },
     actionsRender: [
       {
         type: 'button',
