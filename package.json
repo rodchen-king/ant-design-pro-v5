@@ -61,6 +61,7 @@
     "react-dom": "^16.8.6",
     "react-helmet-async": "^1.0.4",
     "sula": "^1.0.0-beta.9",
+    "beta-sula-component": "0.0.1",
     "umi": "^3.2.14",
     "umi-plugin-sula": "^1.0.0-beta.1",
     "umi-request": "^1.0.8",

@@ -1,9 +1,17 @@
+/*
+ * @Description: 
+ * @Author: rodchen
+ * @Date: 2020-10-23 11:01:05
+ * @LastEditTime: 2020-10-29 11:26:38
+ * @LastEditors: rodchen
+ */
 import component from './en-US/component';
 import globalHeader from './en-US/globalHeader';
 import menu from './en-US/menu';
 import pwa from './en-US/pwa';
 import settingDrawer from './en-US/settingDrawer';
 import settings from './en-US/settings';
+import sula from './en-US/sula';
 
 export default {
   'navBar.lang': 'Languages',
@@ -19,4 +27,5 @@ export default {
   ...settings,
   ...pwa,
   ...component,
+  ...sula
 };

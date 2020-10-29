@@ -165,7 +165,32 @@ function postRule(req: Request, res: Response, u: string, b: Request) {
   res.json(result);
 }
 
+function getRuleByOne(req: Request, res: Response, u: string) {
+  const result = {
+    "name": "Bruce Lee",
+    "rooms": "true",
+    "profession": "web",
+    "tableData": [
+      {
+        key: '0qwe',
+        name: 'Edward King 0123123',
+        age: '32',
+        address: 'London, Park Lane no. 0',
+      },
+      {
+        key: '1',
+        name: 'Edward King 1',
+        age: '32',
+        address: 'London, Park Lane no. 1',
+      }
+    ]
+  }
+
+  return res.json(result);
+}
+
 export default {
   'GET /api/rule': getRule,
   'POST /api/rule': postRule,
+  'GET /api/rule/getRuleByOne': getRuleByOne
 };
