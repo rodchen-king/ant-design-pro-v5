@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: rodchen
+ * @Date: 2020-10-26 14:13:46
+ * @LastEditTime: 2020-10-28 14:21:51
+ * @LastEditors: rodchen
+ */
 export default [
   {
     path: '/user',
@@ -46,6 +53,14 @@ export default [
         code: 'normal-table',
         icon: 'smile',
         component: './QueryTable/NormalTable',
+      },
+      {
+        path: '/query-table/normal-table/create',
+        name: 'normalTable',
+        code: 'normal-table-create',
+        hideInMenu: true,
+        icon: 'smile',
+        component: './QueryTable/NormalTable/Create',
       },
     ],
   },

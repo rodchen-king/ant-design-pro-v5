@@ -1,6 +1,14 @@
+/*
+ * @Description: 
+ * @Author: rodchen
+ * @Date: 2020-10-26 14:13:46
+ * @LastEditTime: 2020-10-29 11:07:35
+ * @LastEditors: rodchen
+ */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import { useModel, useIntl, history, getLocale } from 'umi';
+import { PageContainer } from '@ant-design/pro-layout';
 import { ConfigProvider } from 'sula';
 
 import zhCN from '@/locales/zh-CN/sula';
@@ -20,7 +28,9 @@ export default Com => {
         history={history}
         locale={getLocale() === 'zh-CN' ? zhCN : enUS}
       >
-        <Com currentUser={currentUser} formatMessage={formatMessage} {...props} />
+        <PageContainer>
+          <Com currentUser={currentUser} formatMessage={formatMessage} {...props} />
+        </PageContainer>
       </ConfigProvider>
     );
   };

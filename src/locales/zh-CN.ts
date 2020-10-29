@@ -1,9 +1,17 @@
+/*
+ * @Description: 
+ * @Author: rodchen
+ * @Date: 2020-10-23 11:01:05
+ * @LastEditTime: 2020-10-29 11:26:24
+ * @LastEditors: rodchen
+ */
 import component from './zh-CN/component';
 import globalHeader from './zh-CN/globalHeader';
 import menu from './zh-CN/menu';
 import pwa from './zh-CN/pwa';
 import settingDrawer from './zh-CN/settingDrawer';
 import settings from './zh-CN/settings';
+import sula from './zh-CN/sula';
 
 export default {
   'navBar.lang': '语言',
@@ -19,4 +27,5 @@ export default {
   ...settings,
   ...pwa,
   ...component,
+  ...sula,
 };

@@ -1,22 +1,18 @@
 export const remoteDataSource = {
-  url: 'https://randomuser.me/api',
+  url: '/api/rule',
   method: 'GET',
   convertParams({ params }) {
+    
     return {
-      results: params.pageSize,
+      pageSize: params.pageSize,
+      pageNumber: params.current,
       ...params,
     };
   },
-  converter({ data }) {
+  converter({ data, response: { total } }) {
     return {
-      list: data.results.map((item, index) => {
-        return {
-          ...item,
-          id: `${index}`,
-          name: `${item.name.first} ${item.name.last}`,
-        };
-      }),
-      total: 100,
+      list: data,
+      total: total,
     };
   },
 };
