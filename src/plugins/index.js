@@ -2,11 +2,11 @@
  * @Description: 
  * @Author: rodchen
  * @Date: 2020-10-28 10:16:11
- * @LastEditTime: 2020-10-29 19:09:25
+ * @LastEditTime: 2020-10-31 12:29:25
  * @LastEditors: rodchen
  */
 import { registerFieldPlugin } from 'sula';
-import { EditTable } from 'beta-sula-component';  
+import { EditTable } from 'sula-register-components';  
 import sula from 'sula/es/core';
 
 
