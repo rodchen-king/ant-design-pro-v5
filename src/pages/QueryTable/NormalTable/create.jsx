@@ -1,6 +1,5 @@
 import React from 'react';
 import { CreateForm } from 'sula';
-import { Table, Input, Button, Popconfirm, Form } from 'antd';
 import access from '@/components/access';
 
 const Create = (props) => {
@@ -126,16 +125,17 @@ const Create = (props) => {
                 editable: true,
               }
             ],
-            addNode:  <Button
-                        type="primary"
-                        style={{
-                          marginBottom: 16,
-                          position: 'absolute',
-                          right: '0'
-                        }}
-                      >
-                        添加一行
-                      </Button>,
+            // addNode:  <Button
+            //             type="primary"
+            //             style={{
+            //               marginBottom: 16,
+            //               position: 'absolute',
+            //               right: '0'
+            //             }}
+            //           >
+            //             添加一行
+            //           </Button>,
+            formatMessage: format
           }
         },
       },

@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: rodchen
  * @Date: 2020-10-26 14:13:46
- * @LastEditTime: 2020-10-29 11:24:41
+ * @LastEditTime: 2020-11-01 23:02:07
  * @LastEditors: rodchen
  */
 export default {
@@ -22,5 +22,7 @@ export default {
   successText: 'Success',
   // table
   selectedRecords: 'Selected1 {{count}} records',
-  'flow.confirm': '陈子龙'
+  'sula-component.edit-table.action': 'action',
+  'sula-component.edit-table.delete': 'make sure delete？',
+  'sula-component.edit-table.addRow': 'Add Row'
 };

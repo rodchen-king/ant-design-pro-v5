@@ -2,7 +2,7 @@
  * @Description:
  * @Author: rodchen
  * @Date: 2020-10-26 14:13:46
- * @LastEditTime: 2020-11-01 15:54:10
+ * @LastEditTime: 2020-11-01 23:01:34
  * @LastEditors: rodchen
  */
 export default {
@@ -22,4 +22,7 @@ export default {
   successText: '成功',
   // table
   selectedRecords: '已选 {{count}} 项',
+  'sula-component.edit-table.action': '操作',
+  'sula-component.edit-table.delete': '确认删除吗？',
+  'sula-component.edit-table.addRow': '新增一行'
 };
