@@ -1,57 +1,17 @@
-# Ant Design Pro
 
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+## <span style="font-size:18px; color: #4569d4">项目介绍</span>
 
-## Environment Prepare
+整个项目基于 ant deisgn pro v5 + sula 进行开发，这个模块主要介绍如下
 
-Install `node_modules`:
+- ant deisgn pro v5
+- sula
+- ant design pro v5 + sula
 
-```bash
-npm install
-```
+## <span style="font-size:18px; color: #4569d4">项目 github 地址</span>
 
-or
+https://github.com/rodchen-king/ant-design-pro-v5
 
-```bash
-yarn
-```
+## 文档介绍
+地址：[ant design pro v5 + sula](https://rodchen-king.github.io/sula-register-components/#/ant_design_pro_v5/start)
 
-## Provided Scripts
-
-Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
-
-Scripts provided in `package.json`. It's safe to modify or add additional script:
-
-### Start project
-
-```bash
-npm start
-```
-
-### Build project
-
-```bash
-npm run build
-```
-
-### Check code style
-
-```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
-```
-
-### Test code
-
-```bash
-npm test
-```
-
-## More
-
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
+![](https://raw.githubusercontent.com/rodchen-king/front-book/master/AAA29582-C850-4AD3-8CB9-BBF795BDE12E.png)
