@@ -4,7 +4,7 @@ import { notification } from 'antd';
 import { history, RequestConfig } from 'umi';
 import RightContent from '@/components/RightContent';
 import Footer from '@/components/Footer';
-import { ResponseError } from 'umi-request';
+import { ResponseError, RequestOptionsInit } from 'umi-request';
 import { queryCurrent, queryUserMenuAuth } from './services/user';
 import defaultSettings from '../config/defaultSettings';
 
@@ -118,6 +118,16 @@ const errorHandler = (error: ResponseError) => {
   throw error;
 };
 
+const requestInterceptors = [
+  (url: string, options: RequestOptionsInit) => {
+    return {
+      url: `https://www.easy-mock.com/mock/5f9e6df90bf9ee0300940a04${url}`,
+      options,
+    };
+  },
+];
+
 export const request: RequestConfig = {
   errorHandler,
+  requestInterceptors,
 };

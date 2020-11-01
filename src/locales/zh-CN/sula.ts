@@ -1,8 +1,8 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: rodchen
  * @Date: 2020-10-26 14:13:46
- * @LastEditTime: 2020-10-29 11:24:26
+ * @LastEditTime: 2020-11-01 15:54:10
  * @LastEditors: rodchen
  */
 export default {
@@ -22,5 +22,4 @@ export default {
   successText: '成功',
   // table
   selectedRecords: '已选 {{count}} 项',
-  'flow.confirm': '陈子龙'
 };
