@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import { ResponseError, RequestOptionsInit } from 'umi-request';
 import { queryCurrent, queryUserMenuAuth } from './services/user';
 import defaultSettings from '../config/defaultSettings';
+import './sula-config'
 
 export async function getInitialState(): Promise<{
   settings?: LayoutSettings;
