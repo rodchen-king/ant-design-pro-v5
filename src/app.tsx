@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import { ResponseError, RequestOptionsInit } from 'umi-request';
 import { queryCurrent, queryUserMenuAuth } from './services/user';
 import defaultSettings from '../config/defaultSettings';
-import './sula-config'
+// import './sula-config'
 
 export async function getInitialState(): Promise<{
   settings?: LayoutSettings;
@@ -119,16 +119,16 @@ const errorHandler = (error: ResponseError) => {
   throw error;
 };
 
-const requestInterceptors = [
-  (url: string, options: RequestOptionsInit) => {
-    return {
-      url: `https://www.easy-mock.com/mock/5f9e6df90bf9ee0300940a04${url}`,
-      options,
-    };
-  },
-];
+// const requestInterceptors = [
+//   (url: string, options: RequestOptionsInit) => {
+//     return {
+//       url: `https://www.easy-mock.com/mock/5f9e6df90bf9ee0300940a04${url}`,
+//       options,
+//     };
+//   },
+// ];
 
 export const request: RequestConfig = {
   errorHandler,
-  requestInterceptors,
+  // requestInterceptors,
 };

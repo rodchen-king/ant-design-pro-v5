@@ -2,7 +2,7 @@
  * @Description:
  * @Author: rodchen
  * @Date: 2020-10-30 23:44:59
- * @LastEditTime: 2020-11-01 17:40:18
+ * @LastEditTime: 2020-11-05 22:10:10
  * @LastEditors: rodchen
  */
 // https://umijs.org/config/
@@ -58,9 +58,9 @@ export default defineConfig({
   title: false,
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV || 'dev'],
-  mock: {
-    exclude: ['mock/user.ts', 'mock/listTableList.ts'],
-  },
+  // mock: {
+  //   exclude: ['mock/user.ts', 'mock/listTableList.ts'],
+  // },
   manifest: {
     basePath: '/',
   },
